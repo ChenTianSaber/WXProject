@@ -1,0 +1,67 @@
+<!--pages/upload/upload.wxml-->
+<view style="height:100%;width:100%;">
+  <!-- 写文字的地方 -->
+  <textarea class="input" placeholder="写点什么吧..." placeholder-style="color:rgb(204, 204, 204);font-size:32rpx" maxlength="1000" bindblur="bindTextAreaBlur"></textarea>
+
+  <view style="display:flex;flex-dirction:row,margin-top:16rpx;justify-content:center;">
+
+    <!-- 传图片的地方 -->
+    <view bindtap='chooseImage' style="width:300rpx;height:300rpx;background-color:rgb(239,239,239);display:flex;justify-content:center;align-items:center;margin-right:16rpx;">
+      <block wx:if="{{!hasChooseImage}}">
+        <image src="../../images/picture.png" style="width:80rpx;height:80rpx;"></image>
+      </block>
+      <block wx:if="{{hasChooseImage}}">
+        <image src="{{imagePath}}" mode="aspectFill" style="width:300rpx;height:300rpx;"></image>
+      </block>
+    </view>
+
+    <!-- 录音的地方 -->
+    <view bindtap='clickRecord' bindlongpress='clickLongRecord' style="width:300rpx;height:300rpx;background-color:rgb(239,239,239);display:flex;justify-content:center;align-items:center;margin-left:16rpx;">
+      
+      <block wx:if="{{recorderState==0}}">
+        <view style="display:flex;justify-content:center;align-items:center;flex-direction: column">
+          <image src="../../images/mic.png" style="width:80rpx;height:80rpx;"></image>
+          <text style="color:rgb(197,201,206);font-size:24rpx;margin-top:16rpx">点击进行录音</text>
+        </view>
+      </block>
+      <block wx:if="{{recorderState==1}}">
+        <view style="display:flex;justify-content:center;align-items:center;flex-direction: column">
+          <image src="../../images/stop_gray.png" style="width:80rpx;height:80rpx;"></image>
+          <text style="color:rgb(197,201,206);font-size:24rpx;margin-top:16rpx">点击暂停，长按结束</text>
+        </view>
+      </block>
+      <block wx:if="{{recorderState==2}}">
+        <view style="display:flex;justify-content:center;align-items:center;flex-direction: column">
+          <image src="../../images/play_gray.png" style="width:80rpx;height:80rpx;"></image>
+          <text style="color:rgb(197,201,206);font-size:24rpx;margin-top:16rpx">点击继续，长按结束</text>
+        </view>
+      </block>
+      <block wx:if="{{recorderState==3}}">
+        <block wx:if="{{playerState==0}}">
+          <view style="display:flex;justify-content:center;align-items:center;flex-direction: column">
+            <image src="../../images/play2.png" style="width:80rpx;height:80rpx;"></image>
+            <text style="color:rgb(197,201,206);font-size:24rpx;margin-top:16rpx">点击播放，长按重录</text>
+          </view>
+        </block>
+        <block wx:if="{{playerState==1}}">
+          <view style="display:flex;justify-content:center;align-items:center;flex-direction: column">
+            <image src="../../images/pause.png" style="width:80rpx;height:80rpx;"></image>
+            <text style="color:rgb(197,201,206);font-size:24rpx;margin-top:16rpx">点击暂停，长按重录</text>
+          </view>
+        </block>
+        <block wx:if="{{playerState==2}}">
+          <view style="display:flex;justify-content:center;align-items:center;flex-direction: column">
+            <image src="../../images/play2.png" style="width:80rpx;height:80rpx;"></image>
+            <text style="color:rgb(197,201,206);font-size:24rpx;margin-top:16rpx">点击播放，长按重录</text>
+          </view>
+        </block>
+      </block>
+
+    </view>
+
+  </view>
+
+  <!-- 发布按钮 -->
+  <view class="submit-btn" bindtap='submitData'>发布</view>
+
+</view>

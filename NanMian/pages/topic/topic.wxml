@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view wx:key="{{objectId}}" wx:for="{{topics}}">
+
+    <view data-topicId="{{item.TopicId}}" data-imageUrl="{{item.imageUrl}}"   data-cardTitle="{{item.cardTitle}}" class="card-container" bindtap="jumpToDetail">
+      <text class="card-date">{{item.createdAt}}</text>
+      <view class="card">
+        <image src="{{item.imageUrl}}" style="height:350rpx;width:700rpx;border-top-left-radius: 8rpx;border-top-right-radius:8rpx;" mode="aspectFill"></image>
+        <text class="card-title">{{item.cardTitle}}</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>

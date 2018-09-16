@@ -1,0 +1,43 @@
+/**index.wxss**/
+.card {
+  width: 700rpx;
+  display: flex;
+  background-color:white;
+  border-radius: 8rpx;
+  margin-top: 8rpx;
+  flex-direction: column;
+}
+
+.card-title {
+  display: flex;
+  padding: 32rpx;
+  color: rgb(51,51,51);
+  font-size: 36rpx;
+  border-bottom-left-radius: 8rpx;
+  border-bottom-right-radius:8rpx;
+}
+
+.card-container {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 32rpx;
+}
+
+.card-date {
+  font-size: 26rpx;
+  color: rgb(197,201,206);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
+  background-color: whitesmoke;
+} 

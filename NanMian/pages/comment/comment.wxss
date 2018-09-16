@@ -1,0 +1,25 @@
+/* pages/comment/comment.wxss */
+.comment-text {
+  height: 100%;
+  display: flex;
+  color: rgb(51,51,51);
+  padding-top:36rpx;
+  font-size: 36rpx;
+  line-height: 56rpx;
+  padding-left: 12rpx;
+}
+
+.comment-avatar {
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 35rpx;
+}
+
+.comment-author {
+  color: rgb(89,93,96);
+  font-size: 28rpx;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  margin-left: 24rpx
+}

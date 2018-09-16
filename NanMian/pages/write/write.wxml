@@ -1,0 +1,7 @@
+<!--pages/write/write.wxml-->
+<view class="container">
+  <view class="input-container">
+    <textarea class="input" placeholder="说点什么吧..." placeholder-style="color:rgb(204, 204, 204);font-size:32rpx" maxlength="1000" bindblur="bindTextAreaBlur"></textarea>
+  </view>
+  <view class="button" bindtap='submit'>发布</view>
+</view>

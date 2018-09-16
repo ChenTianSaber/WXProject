@@ -1,0 +1,9 @@
+<!--pages/profile/profile.wxml-->
+<view class="container">
+  <!-- 头像和名字 -->
+  <image class="avatar" src="{{userAvatar}}"></image>
+  <text style="font-size:32rpx;color:rgb(51,51,51);margin-top:28rpx;">{{userName}}</text>
+
+  <!-- 标语 -->
+  <text class="motto">在嘈杂世界里，认真说话。</text>
+</view>

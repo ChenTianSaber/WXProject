@@ -1,0 +1,13 @@
+<!--pages/comment/comment.wxml-->
+<view style="display:flex; flex-direction: column;padding:38rpx">
+  <!-- 头像和名字 -->
+  <view style="display:flex; flex-direction: row">
+    <image class="comment-avatar" src="{{userAvatar}}"></image>
+    <text class="comment-author">{{username}}</text>
+  </view>
+  <!-- 评论内容 -->
+  <text class="comment-text">{{commenttext}}</text>
+
+  <!-- 评论时间 -->
+  <text style="font-size:26rpx;color:rgb(197,201,206);margin-top:26rpx;">{{createdate}}</text>
+</view>

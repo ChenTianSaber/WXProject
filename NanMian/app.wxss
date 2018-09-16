@@ -1,0 +1,4 @@
+/**app.wxss**/
+page{
+  background-color: whitesmoke;
+}

@@ -1,0 +1,25 @@
+/* pages/upload/upload.wxss */
+page{
+  background-color: white;
+}
+
+.input {
+  width: 700rpx;
+  height: 220rpx;
+  background-color: white;
+  font-size:32rpx;
+  line-height: 56rpx;
+  padding: 32rpx;
+}
+
+.submit-btn {
+  position: fixed;
+  bottom: 0px;
+  height: 100rpx;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(41, 153, 255);
+}

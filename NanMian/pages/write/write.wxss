@@ -1,0 +1,39 @@
+/* pages/write/write.wxss */
+page{
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.input-container {
+  width: 100%;
+  height: 1100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 700rpx;
+  height: 1050rpx;
+  background-color: white;
+  font-size:32rpx;
+  line-height: 56rpx;
+}
+
+.button {
+  height: 100rpx;
+  width: 100%;
+  background-color: rgb(41, 153, 255);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+}
